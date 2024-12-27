@@ -43,7 +43,7 @@ void ParserGenerator::parse(Tokenizer& tokenizer,
     out_stack << "$" << start_symbol << endl;
 
     // Continue parsing until stack is empty or error occurs
-    while (!parse_stack.empty() && current_token!="EPSILON") {
+    while (!parse_stack.empty()) {
         string top = parse_stack.top();
         
         // Debug output
